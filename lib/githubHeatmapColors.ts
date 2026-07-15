@@ -1,0 +1,7 @@
+export const contributionLevelColor = {
+  NONE: "#161B22",
+  FIRST_QUARTILE: "#0E4429",
+  SECOND_QUARTILE: "#006D32",
+  THIRD_QUARTILE: "#26A641",
+  FOURTH_QUARTILE: "#39D353",
+} as const;

@@ -1,4 +1,7 @@
-import { CalendarDays, GitCommitHorizontal } from "lucide-react";
+import {
+  CalendarDays,
+  GitCommitHorizontal,
+} from "lucide-react";
 
 interface Props {
   totalContributions: number;
@@ -18,7 +21,7 @@ export default function ContributionHeader({
             {totalContributions}
           </h2>
 
-          <span className="pb-2 text-lg text-zinc-400">
+          <span className="pb-2 text-xl text-zinc-400">
             Contributions
           </span>
 
@@ -30,19 +33,15 @@ export default function ContributionHeader({
 
       </div>
 
-      <div className="flex gap-6">
+      <div className="flex gap-4">
 
         <div className="rounded-xl border border-white/10 bg-white/5 px-5 py-4">
 
-          <div className="mb-2 flex items-center gap-2">
+          <CalendarDays className="mb-2" size={18} />
 
-            <CalendarDays size={18} />
-
-            <span className="text-sm text-zinc-400">
-              Period
-            </span>
-
-          </div>
+          <p className="text-sm text-zinc-500">
+            Period
+          </p>
 
           <p className="font-semibold">
             52 Weeks
@@ -52,18 +51,14 @@ export default function ContributionHeader({
 
         <div className="rounded-xl border border-white/10 bg-white/5 px-5 py-4">
 
-          <div className="mb-2 flex items-center gap-2">
+          <GitCommitHorizontal className="mb-2" size={18} />
 
-            <GitCommitHorizontal size={18} />
-
-            <span className="text-sm text-zinc-400">
-              Source
-            </span>
-
-          </div>
+          <p className="text-sm text-zinc-500">
+            Source
+          </p>
 
           <p className="font-semibold">
-            GitHub GraphQL
+            GitHub API
           </p>
 
         </div>

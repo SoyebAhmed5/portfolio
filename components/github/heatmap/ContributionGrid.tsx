@@ -2,7 +2,10 @@
 
 import { motion } from "framer-motion";
 
-import type { ContributionCalendar } from "@/types/contribution";
+import type {
+  ContributionCalendar,
+  ContributionDay,
+} from "@/types/contribution";
 
 import ContributionMonths from "./ContributionMonths";
 import ContributionDays from "./ContributionDays";
@@ -10,16 +13,25 @@ import ContributionWeek from "./ContributionWeek";
 
 interface Props {
   calendar: ContributionCalendar;
+
+  onHover: (
+    day: ContributionDay,
+    rect: DOMRect
+  ) => void;
+
+  onLeave: () => void;
 }
 
 export default function ContributionGrid({
   calendar,
+  onHover,
+  onLeave,
 }: Props) {
   return (
     <motion.div
       initial={{
         opacity: 0,
-        y: 30,
+        y: 20,
       }}
       whileInView={{
         opacity: 1,
@@ -29,11 +41,10 @@ export default function ContributionGrid({
         once: true,
       }}
       transition={{
-        duration: 0.7,
+        duration: 0.6,
       }}
       className="overflow-x-auto hide-scrollbar"
     >
-
       <ContributionMonths
         calendar={calendar}
       />
@@ -42,19 +53,21 @@ export default function ContributionGrid({
 
         <ContributionDays />
 
-        <div className="flex"
-  style={{
-    gap: "4px",
-  }}>
-
+        <div
+          className="flex"
+          style={{
+            gap: "4px",
+          }}
+        >
           {calendar.weeks.map((week, index) => (
-           <ContributionWeek
-    key={index}
-    week={week}
-    index={index}
-/>
+            <ContributionWeek
+              key={index}
+              week={week}
+              index={index}
+              onHover={onHover}
+              onLeave={onLeave}
+            />
           ))}
-
         </div>
 
       </div>

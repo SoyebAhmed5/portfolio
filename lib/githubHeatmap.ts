@@ -13,28 +13,34 @@ export function getMonthLabels(
 ): MonthLabel[] {
   const labels: MonthLabel[] = [];
 
-  let previousMonth = "";
+  let lastMonth = "";
 
   calendar.weeks.forEach((week, weekIndex) => {
-    const firstDay = week.contributionDays[0];
+    const date = new Date(week.contributionDays[0].date);
 
-    const month = new Date(firstDay.date).toLocaleString("en-US", {
+    const month = date.toLocaleString("en-US", {
       month: "short",
     });
 
-    if (month !== previousMonth) {
+    if (month !== lastMonth) {
       labels.push({
         month,
         weekIndex,
       });
 
-      previousMonth = month;
+      lastMonth = month;
     }
   });
 
   return labels;
 }
 
-export function getWeekWidth() {
-  return CELL_SIZE + CELL_GAP;
-}
+export const DAYS = [
+  "",
+  "Mon",
+  "",
+  "Wed",
+  "",
+  "Fri",
+  "",
+];

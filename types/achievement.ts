@@ -1,9 +1,11 @@
-import { IconType } from "react-icons";
+import { LucideIcon } from "lucide-react";
 
 export interface Achievement {
-  id: number;
+  id: string;
   title: string;
-  value: string;
+  organization: string;
   description: string;
-  icon: IconType;
+  year: string;
+  icon: LucideIcon;
+  color: string;
 }

@@ -1,10 +1,12 @@
 "use client";
 
 import SectionHeading from "@/components/ui/SectionHeading";
-import AchievementCard from "@/components/cards/AchievementCard";
+
+import AchievementCard from "./AchievementCard";
+
 import { achievements } from "@/data/achievements";
 
-export default function Achievements() {
+export default function AchievementsSection() {
   return (
     <section
       id="achievements"
@@ -14,15 +16,16 @@ export default function Achievements() {
 
         <SectionHeading
           title="Achievements"
-          subtitle="Milestones that reflect my growth in software development and competitive programming."
+          subtitle="Milestones that reflect my technical growth and professional journey."
         />
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
 
-          {achievements.map((achievement) => (
+          {achievements.map((achievement, index) => (
             <AchievementCard
               key={achievement.id}
               achievement={achievement}
+              index={index}
             />
           ))}
 

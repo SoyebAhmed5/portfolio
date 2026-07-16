@@ -1,46 +1,78 @@
-import { Achievement } from "@/types/achievement";
-
 import {
-  FaCode,
-  FaTrophy,
-  FaLaptopCode,
-  FaMedal,
-} from "react-icons/fa";
+  Trophy,
+  Plane,
+  BrainCircuit,
+  Code2,
+} from "lucide-react";
+
+import { Achievement } from "@/types/achievement";
 
 export const achievements: Achievement[] = [
   {
-    id: 1,
-    title: "Coding Problems",
-    value: "400+",
+    id: "gfg",
+
+    title: "Campus Mantri",
+
+    organization: "GeeksforGeeks",
+
     description:
-      "Solved 400+ problems across LeetCode, GeeksforGeeks, HackerRank and CodeChef.",
-    icon: FaCode,
+      "Representing GeeksforGeeks on campus by promoting technical learning, coding culture, and community engagement.",
+
+    year: "2026",
+
+    icon: Trophy,
+
+    color: "#2F8D46",
   },
 
   {
-    id: 2,
-    title: "LeetCode Ranking",
-    value: "Top 9.33%",
+    id: "aai",
+
+    title: "CSE / IT Intern",
+
+    organization: "Airports Authority of India",
+
     description:
-      "Ranked among the Top 9.33% of LeetCode users globally.",
-    icon: FaTrophy,
+      "Completed internship in the CSE/IT department, gaining practical exposure to enterprise IT systems and software workflows.",
+
+    year: "June 2026",
+
+    icon: Plane,
+
+    color: "#0EA5E9",
   },
 
   {
-    id: 3,
-    title: "Young Turks 2025",
-    value: "98.52%",
+    id: "projects",
+
+    title: "AI & Full Stack Developer",
+
+    organization: "Personal Projects",
+
     description:
-      "Secured 98.52 percentile in Naukri Campus Young Turks.",
-    icon: FaMedal,
+      "Built real-world full stack applications integrating AI, modern web technologies, REST APIs, and responsive UI.",
+
+    year: "2025–Present",
+
+    icon: BrainCircuit,
+
+    color: "#8B5CF6",
   },
 
   {
-    id: 4,
-    title: "Internships",
-    value: "3+",
+    id: "cp",
+
+    title: "Competitive Programmer",
+
+    organization: "LeetCode • GFG • HackerRank • CodeChef",
+
     description:
-      "Completed internships at Edunet Foundation, VaultofCodes and Airports Authority of India.",
-    icon: FaLaptopCode,
+      "Continuously improving algorithmic thinking and problem-solving through competitive programming platforms.",
+
+    year: "Ongoing",
+
+    icon: Code2,
+
+    color: "#F97316",
   },
 ];

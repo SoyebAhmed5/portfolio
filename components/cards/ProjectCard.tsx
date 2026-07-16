@@ -24,14 +24,15 @@ export default function ProjectCard({ project }: Props) {
         <motion.div
           whileHover={{ scale: 1.08 }}
           transition={{ duration: 0.4 }}
-          className="h-full w-full"
+            className="relative h-full w-full"
         >
           <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover"
-          />
+  src={project.image}
+  alt={project.title}
+  fill
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  className="object-cover"
+/>
         </motion.div>
 
       </div>

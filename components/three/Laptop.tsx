@@ -15,11 +15,11 @@ const { pointer } = useThree();
   useEffect(() => {
     const box = new THREE.Box3().setFromObject(model);
 
-console.log(box.getSize(new THREE.Vector3()));
+// console.log(box.getSize(new THREE.Vector3()));
   }, [scene]);
 useFrame((state) => {
     if (!group.current) return;
-console.log(pointer.x, pointer.y);
+
     // Floating
     group.current.position.y =
     -2 + Math.sin(state.clock.elapsedTime * 1.5) * 0.2;

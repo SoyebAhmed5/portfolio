@@ -1,57 +1,55 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Stars } from "@react-three/drei";
+import { Environment, Stars } from "@react-three/drei";
+
 import Laptop from "./Laptop";
-import { Environment } from "@react-three/drei";
 
 export default function HeroCanvas() {
   return (
-   <Canvas
-  camera={{
-    position: [0, 0, 8],
-    fov: 40,
-  }}
->
-     <ambientLight intensity={1.8} />
+    <Canvas
+      className="!absolute inset-0"
+      gl={{
+  antialias: true,
+  alpha: true,
+}}
+      camera={{
+  position: [0, 0, 7.5],
+  fov: 38,
+}}
+      dpr={[1, 2]}
+    >
+      <ambientLight intensity={1.4} />
 
-<directionalLight
-  position={[5, 5, 5]}
-  intensity={2}
-/>
+      <directionalLight
+        position={[5, 5, 5]}
+        intensity={2}
+      />
 
+      <pointLight
+        position={[2, 2, 2]}
+        color="#8B5CF6"
+        intensity={20}
+      />
 
-<Environment preset="city" />
+      <pointLight
+        position={[-2, 1, 2]}
+        color="#06B6D4"
+        intensity={10}
+      />
 
-<pointLight
-  position={[0, 2, 2]}
-  color="#8B5CF6"
-  intensity={35}
-/>
-
-<pointLight
-  position={[-3, 0, 2]}
-  color="#06B6D4"
-  intensity={20}
-/>
+      <Environment preset="city" />
 
       <Stars
-        radius={100}
-        depth={50}
-        count={5000}
+        radius={80}
+        depth={40}
+        count={2500}
         factor={4}
-        saturation={0}
         fade
-        speed={1}
+        speed={0.4}
       />
 
       <Laptop />
-
-      {/* <OrbitControls
-        enableZoom={false}
-        autoRotate
-        autoRotateSpeed={1}
-      /> */}
     </Canvas>
   );
 }

@@ -1,5 +1,6 @@
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "sonner";
+// import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
   title: "Soyeb Ahmed",
@@ -15,6 +16,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
      <body>
   {children}
+  <Toaster
+  position="top-right"
+  richColors
+  theme="dark"
+/>
 </body>
     </html>
   );

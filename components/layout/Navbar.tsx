@@ -1,9 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+
+import Logo from "./Logo";
+import NavLinks from "./NavLinks";
+import ResumeButton from "./ResumeButton";
+import useScrolled from "@/hooks/useScrolled";
 
 const links = [
   { name: "Home", href: "#home" },
@@ -16,53 +21,89 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const scrolled = useScrolled();
 
   return (
     <motion.nav
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 z-50 w-full"
+      className="fixed inset-x-0 top-0 z-50"
     >
-      <div className="mx-auto mt-4 flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-white/5 px-8 py-4 backdrop-blur-xl">
+      <motion.div
+  animate={{
+    scale: scrolled ? 0.97 : 1,
+    y: scrolled ? -2 : 0,
+  }}
+  transition={{
+    duration: 0.25,
+  }}
+  className={`
+    mx-auto
+    mt-4
+    flex
+    max-w-7xl
+    items-center
+    justify-between
+    rounded-full
+    border
+    px-8
+    transition-all
+    backdrop-blur-2xl
 
-        <Link
-          href="/"
-          className="text-2xl font-bold tracking-wider"
-        >
-          Soyeb.
-        </Link>
+    ${
+      scrolled
+        ? "border-violet-500/20 bg-black/60 shadow-[0_10px_40px_rgba(0,0,0,.35)]"
+        : "border-white/10 bg-white/5"
+    }
+  `}
+>
 
-        <div className="hidden gap-8 md:flex">
-          {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="transition hover:text-violet-400"
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
+        <Logo />
 
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          className="hidden rounded-full bg-violet-600 px-5 py-2 transition hover:bg-violet-500 md:block"
-        >
-          Resume
-        </a>
+       <NavLinks />
 
+       <div className="hidden md:block">
+  <ResumeButton />
+</div>
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden"
         >
           {open ? <X /> : <Menu />}
         </button>
-      </div>
+      </motion.div>
 
-      {open && (
-        <div className="mx-4 mt-3 rounded-2xl border border-white/10 bg-black/80 backdrop-blur-xl md:hidden">
+     <AnimatePresence>
+
+{open && (
+        <motion.div
+  initial={{
+    opacity: 0,
+    y: -10,
+  }}
+  animate={{
+    opacity: 1,
+    y: 0,
+  }}
+  exit={{
+    opacity: 0,
+    y: -10,
+  }}
+  transition={{
+    duration: 0.2,
+  }}
+  className="
+    mx-4
+    mt-3
+    rounded-2xl
+    border
+    border-white/10
+    bg-black/80
+    backdrop-blur-xl
+    md:hidden
+  "
+>
           {links.map((link) => (
             <a
               key={link.name}
@@ -73,8 +114,9 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </motion.nav>
   );
 }

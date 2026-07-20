@@ -2,12 +2,13 @@
 
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 
 export default function Laptop() {
- const { scene } = useGLTF("/models/laptop.glb");
-const model = scene.clone();
+const { scene } = useGLTF("/models/laptop.glb");
+
+const model = useMemo(() => scene.clone(), [scene]);
 
   const group = useRef<THREE.Group>(null);
 const { pointer } = useThree();
@@ -21,33 +22,33 @@ useFrame((state) => {
     if (!group.current) return;
 
     // Floating
-    group.current.position.y =
-    -2 + Math.sin(state.clock.elapsedTime * 1.5) * 0.2;
+   group.current.position.y =
+  -1.1 + Math.sin(state.clock.elapsedTime * 1.3) * 0.12;
 
     // Mouse Follow
     group.current.rotation.y = THREE.MathUtils.lerp(
         group.current.rotation.y,
-        Math.PI + pointer.x * 0.5,
+        Math.PI - 0.35 + pointer.x * 0.22,
         0.06
     );
 
     group.current.rotation.x = THREE.MathUtils.lerp(
         group.current.rotation.x,
-        0.2 - pointer.y * 0.25,
+       0.15 - pointer.y * 0.12,
         0.06
     );
 
     // Small idle tilt
     group.current.rotation.z =
-        Math.sin(state.clock.elapsedTime) * 0.03;
+       Math.sin(state.clock.elapsedTime * 0.8) * 0.015;
 });
   return (
 
-    <group
-    ref={group}
-    scale={15}
-    position={[0,-2,0]}
-    rotation={[0.2,Math.PI,0]}
+   <group
+  ref={group}
+  scale={9}
+  position={[0.4, -1.2, -0.8]}
+  rotation={[0.15, Math.PI, 0]}
 >
     <primitive object={model} />
 </group>

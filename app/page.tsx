@@ -10,6 +10,8 @@ import Highlights from "@/components/sections/Highlights";
 import GithubDashboard from "@/components/sections/GithubDashboard";
 import CodingDashboard from "@/components/coding/CodingDashboard";
 import AchievementTimeline from "@/components/achievements/AchievementTimeline";
+import ContactSection from "@/components/contact/ContactSection";
+import Footer from "@/components/footer/Footer";
 
 
 export default function Home() {
@@ -38,6 +40,10 @@ export default function Home() {
      <AchievementsSection />
 
      <AchievementTimeline />
+
+     <ContactSection />
+
+     <Footer />
   
 
     </main>

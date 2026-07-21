@@ -11,7 +11,7 @@ type GLTFResult = GLTF & {
   materials: {
     MacBookPro: THREE.MeshStandardMaterial
   }
-  animations: GLTFAction[]
+  // animations: GLTFAction[]
 }
 
 export function Model(props: JSX.IntrinsicElements['group']) {

@@ -28,11 +28,10 @@ export default function SkillCard({
       }}
       className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
     >
-      <Icon
-        size={55}
-        color={color}
-        className="transition duration-300 group-hover:scale-110"
-      />
+     <Icon
+  className="h-14 w-14 transition duration-300 group-hover:scale-110"
+  style={{ color }}
+/>
 
       <h3 className="mt-6 text-xl font-semibold">{name}</h3>
     </motion.div>

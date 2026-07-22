@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { LucideIcon } from "lucide-react";
+import type { IconType } from "react-icons";
 
 interface SkillCardProps {
-  icon: LucideIcon;
+  icon: IconType;
   name: string;
   color: string;
 }
@@ -34,9 +34,7 @@ export default function SkillCard({
         className="transition duration-300 group-hover:scale-110"
       />
 
-      <h3 className="mt-6 text-xl font-semibold">
-        {name}
-      </h3>
+      <h3 className="mt-6 text-xl font-semibold">{name}</h3>
     </motion.div>
   );
 }

@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Toaster } from "sonner";
 import StructuredData from "@/components/seo/StructuredData";
+import { Analytics } from "@vercel/analytics/next"
 // import { ThemeProvider } from "@/components/theme-provider";
 
 import type { Metadata } from "next";
@@ -128,6 +129,7 @@ export default function RootLayout({
   richColors
   theme="dark"
 />
+<Analytics/>
 </body>
     </html>
   );

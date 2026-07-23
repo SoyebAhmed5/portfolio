@@ -2,6 +2,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import StructuredData from "@/components/seo/StructuredData";
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from "@next/third-parties/google";
 // import { ThemeProvider } from "@/components/theme-provider";
 
 import type { Metadata } from "next";
@@ -114,23 +115,26 @@ export const viewport = {
   themeColor: "#0f172a",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout(
+  {children,}:{children: React.ReactNode;}
+  )
+ {
   return (
     <html lang="en" suppressHydrationWarning>
-     <body>
-      <StructuredData />
-  {children}
-  <Toaster
-  position="top-right"
-  richColors
-  theme="dark"
-/>
-<Analytics/>
-</body>
+      <body>
+        <StructuredData />
+
+        {children}
+
+        <Toaster
+          position="top-right"
+          richColors
+          theme="dark"
+        />
+        <Analytics />
+      </body>
+
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
     </html>
   );
 }

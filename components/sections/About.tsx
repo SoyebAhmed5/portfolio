@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Code2, Brain, Briefcase, GraduationCap } from "lucide-react";
+import Image from "next/image";
 
 const stats = [
   {
@@ -53,9 +54,16 @@ export default function About() {
             viewport={{ once: true }}
             className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
           >
-            <div className="mx-auto mb-8 flex h-56 w-56 items-center justify-center rounded-full border border-violet-500/30 bg-gradient-to-br from-violet-600/30 to-cyan-500/30 text-7xl font-bold">
-              SA
-            </div>
+          <div className="relative mx-auto mb-8 h-56 w-56 overflow-hidden rounded-full border border-violet-500/30 bg-gradient-to-br from-violet-600/30 to-cyan-500/30">
+  <Image
+  src="/profile.jpeg"
+  alt="Soyeb Ahmed"
+  fill
+  priority
+  sizes="224px"
+  className="object-cover"
+/>
+</div>
 
             <h3 className="text-center text-3xl font-bold">
               Soyeb Ahmed

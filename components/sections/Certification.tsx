@@ -4,17 +4,17 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import HighlightCard from "@/components/cards/HighlightCard";
 import { highlights } from "@/data/highlights";
 
-export default function Highlights() {
+export default function Certification() {
   return (
     <section
-      id="highlights"
+      id="certificates"
       className="py-32 px-6"
     >
       <div className="mx-auto max-w-7xl">
 
         <SectionHeading
-          title="Highlights"
-          subtitle="Certifications, recognitions, and milestones that reflect my commitment to continuous learning."
+          title="Certifications"
+          subtitle="Certifications that reflect my commitment to continuous learning."
         />
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">

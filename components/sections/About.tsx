@@ -12,12 +12,12 @@ const stats = [
   },
   {
     icon: Brain,
-    value: "500+",
+    value: "400+",
     label: "DSA Problems",
   },
   {
     icon: Briefcase,
-    value: "1+",
+    value: "3+",
     label: "Internship",
   },
   {

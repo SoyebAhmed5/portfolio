@@ -1,78 +1,78 @@
 import {
   Trophy,
-  Plane,
-  BrainCircuit,
+  Medal,
   Code2,
+  Target,
 } from "lucide-react";
 
 import { Achievement } from "@/types/achievement";
 
 export const achievements: Achievement[] = [
   {
-    id: "gfg",
+    id: "leetcode",
 
-    title: "Campus Mantri",
+    title: "400+ Coding Problems Solved",
 
-    organization: "GeeksforGeeks",
+    organization: "LeetCode • GeeksforGeeks • HackerRank • CodeChef",
 
     description:
-      "Representing GeeksforGeeks on campus by promoting technical learning, coding culture, and community engagement.",
+      "Solved over 400 coding problems across multiple platforms, strengthening problem-solving, algorithms, and data structures skills.",
+
+    year: "2025–Present",
+
+    icon: Code2,
+
+    color: "#F59E0B",
+  },
+
+  {
+    id: "top",
+
+    title: "Top 9.33% on LeetCode",
+
+    organization: "LeetCode",
+
+    description:
+      "Ranked among the top 9.33% of LeetCode users worldwide, demonstrating strong proficiency in Data Structures and Algorithms.",
 
     year: "2026",
 
     icon: Trophy,
 
-    color: "#2F8D46",
+    color: "#EAB308",
   },
 
   {
-    id: "aai",
+    id: "naukri",
 
-    title: "CSE / IT Intern",
+    title: "98.52 Percentile",
 
-    organization: "Airports Authority of India",
+    organization: "Naukri Campus Young Turks 2025",
 
     description:
-      "Completed internship in the CSE/IT department, gaining practical exposure to enterprise IT systems and software workflows.",
+      "Secured a 98.52 percentile, ranking among the top 2% of participants in the nationwide coding competition.",
 
-    year: "June 2026",
+    year: "2025",
 
-    icon: Plane,
+    icon: Medal,
 
     color: "#0EA5E9",
   },
 
   {
-    id: "projects",
+    id: "competitions",
 
-    title: "AI & Full Stack Developer",
+    title: "National Coding Competitions",
 
-    organization: "Personal Projects",
+    organization: "Naukri Campus • Tata Group • Unstop ",
 
     description:
-      "Built real-world full stack applications integrating AI, modern web technologies, REST APIs, and responsive UI.",
+      "Actively participated in coding competitions and technical challenges organized by leading organizations, continuously improving competitive programming skills.",
 
     year: "2025–Present",
 
-    icon: BrainCircuit,
+    icon: Target,
 
     color: "#8B5CF6",
-  },
-
-  {
-    id: "cp",
-
-    title: "Competitive Programmer",
-
-    organization: "LeetCode • GFG • HackerRank • CodeChef",
-
-    description:
-      "Continuously improving algorithmic thinking and problem-solving through competitive programming platforms.",
-
-    year: "Ongoing",
-
-    icon: Code2,
-
-    color: "#F97316",
   },
 ];

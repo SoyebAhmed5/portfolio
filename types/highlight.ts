@@ -6,4 +6,5 @@ export interface Highlight {
   subtitle: string;
   icon: IconType;
   color: string;
+  link: string
 }

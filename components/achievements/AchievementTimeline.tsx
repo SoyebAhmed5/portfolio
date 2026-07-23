@@ -7,7 +7,7 @@ import { timeline } from "@/data/timeline";
 
 export default function AchievementTimeline() {
   return (
-    <section className="py-32 px-6">
+    <section  id="journey" className="py-32 px-6">
       <div className="mx-auto max-w-5xl">
 
         <SectionHeading

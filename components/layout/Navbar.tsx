@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+// import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -16,6 +16,9 @@ const links = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
+  { name: "Certificates", href: "#certificates" },
+  { name: "Journey", href: "#journey" },
+  
   { name: "Contact", href: "#contact" },
 ];
 

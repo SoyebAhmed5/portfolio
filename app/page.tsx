@@ -6,7 +6,7 @@ import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import AchievementsSection from "@/components/achievements/AchievementsSection";
-import Highlights from "@/components/sections/Highlights";
+import Certification from "@/components/sections/Certification";
 import GithubDashboard from "@/components/sections/GithubDashboard";
 import CodingDashboard from "@/components/coding/CodingDashboard";
 import AchievementTimeline from "@/components/achievements/AchievementTimeline";
@@ -31,7 +31,7 @@ export default function Home() {
       <Experience />
 
 
-      <Highlights />
+      <Certification />
 
      <GithubDashboard />
 

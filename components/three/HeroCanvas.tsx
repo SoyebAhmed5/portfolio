@@ -9,15 +9,16 @@ export default function HeroCanvas() {
   return (
     <Canvas
       className="!absolute inset-0"
-      gl={{
-  antialias: true,
-  alpha: true,
-}}
+       gl={{
+    antialias: false,
+    alpha: true,
+    powerPreference: "high-performance",
+  }}
       camera={{
   position: [0, 0, 7.5],
   fov: 38,
 }}
-      dpr={[1, 2]}
+      dpr={[1, 1.5]}
     >
       <ambientLight intensity={1.4} />
 
@@ -41,12 +42,12 @@ export default function HeroCanvas() {
       <Environment preset="city" />
 
       <Stars
-        radius={80}
-        depth={40}
-        count={2500}
-        factor={4}
+        radius={70}
+        depth={35}
+        count={1500}
+        factor={3}
         fade
-        speed={0.4}
+        speed={0.25}
       />
 
       <Laptop />

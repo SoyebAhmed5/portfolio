@@ -1,10 +1,12 @@
 import {
-  Laptop,
+ Laptop,
   Code2,
   Plane,
   Trophy,
-  BrainCircuit,
   Cpu,
+  BrainCircuit,
+  Sparkles,
+  GraduationCap
 } from "lucide-react";
 
 import { motion } from "framer-motion";
@@ -21,8 +23,10 @@ const iconMap = {
   Code2,
   Plane,
   Trophy,
-  BrainCircuit,
   Cpu,
+  BrainCircuit,
+  Sparkles,
+  GraduationCap
 };
 export default function TimelineItem({
   item,

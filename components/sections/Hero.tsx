@@ -1,7 +1,23 @@
 "use client";
 
-import HeroCanvas from "../three/HeroCanvas";
+// import HeroCanvas from "../three/HeroCanvas";
 import HeroContent from "@/components/hero/HeroContent";
+
+import dynamic from "next/dynamic";
+
+import { Suspense } from "react";
+
+const HeroCanvas = dynamic(
+  () => import("../three/HeroCanvas"),
+  {
+    ssr: false,
+   loading: () => (
+  <div className="flex h-full w-full items-center justify-center rounded-xl bg-gradient-to-br from-slate-900 to-slate-950">
+    <div className="h-10 w-10 animate-spin rounded-full border-4 border-violet-500 border-t-transparent" />
+  </div>
+),
+  }
+);
 
 export default function Hero() {
   return (
@@ -51,7 +67,13 @@ export default function Hero() {
     "
   />
   
-          <HeroCanvas />
+         <Suspense
+  fallback={
+    <div className="h-full w-full animate-pulse rounded-xl bg-slate-900" />
+  }
+>
+  <HeroCanvas />
+</Suspense>
           
         </div>
       </div>

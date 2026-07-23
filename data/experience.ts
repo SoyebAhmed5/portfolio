@@ -1,12 +1,31 @@
 import { Experience } from "@/types/experience";
 
 export const experiences: Experience[] = [
+
+
+  // FlyRank AI
   {
     id: 1,
+    company: "FlyRank AI",
+    role: "Machine Learning Engineering Intern",
+    duration: " July 2026 - Present",
+    location: "remote",
+    type: "Internship",
+    logo: "/experience/flyrank.png",
+   description: [
+  "Developing Machine Learning solutions using Python and modern AI libraries.",
+  "Training, evaluating, and optimizing predictive models for real-world datasets.",
+  "Collaborating with the AI team to research and implement intelligent applications."
+]
+  },
+
+  // Airport Authority India
+  {
+    id: 2,
     company: "Airports Authority of India",
     role: "CSE / IT Intern",
-    duration: "June 2026 - Present",
-    location: "India",
+    duration: "June 2026 - July 2026",
+    location: "On-Site",
     type: "Internship",
     logo: "/experience/aai.png",
     description: [
@@ -16,8 +35,10 @@ export const experiences: Experience[] = [
     ]
   },
 
+
+  // VaultofCodes
   {
-    id: 2,
+    id: 3,
     company: "VaultofCodes",
     role: "Web Development Intern",
     duration: "Oct 2025 - Nov 2025",
@@ -31,8 +52,10 @@ export const experiences: Experience[] = [
     ]
   },
 
+
+  // Edunet Foundation
   {
-    id: 3,
+    id: 4,
     company: "Edunet Foundation",
     role: "Frontend Developer Intern",
     duration: "Aug 2025 - Sep 2025",
@@ -46,11 +69,13 @@ export const experiences: Experience[] = [
     ]
   },
 
+
+// GeeksforGeeks
   {
-    id: 4,
+    id: 5,
     company: "GeeksforGeeks",
     role: "Campus Mantri",
-    duration: "2026 - Present",
+    duration: " June 2026 - Present",
     location: "Campus",
     type: "Leadership",
     logo: "/experience/gfg.png",
@@ -59,5 +84,6 @@ export const experiences: Experience[] = [
       "Helping students with technical learning.",
       "Promoting coding culture and events."
     ]
-  }
+  },
+   
 ];

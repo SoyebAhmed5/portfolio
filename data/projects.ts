@@ -86,7 +86,7 @@ export const projects: Project[] = [
     description:
       "A modern social networking web application built with Flask, MySQL, SQLAlchemy, and Bootstrap. Features include user authentication, post creation, likes, comments, friend requests, profile management, and responsive UI.",
 
-    image: "/projects/socialnest.jfif",
+    image: "/projects/socialnest.png",
 
     github: "https://github.com/SoyebAhmed5/SocialNest",
 

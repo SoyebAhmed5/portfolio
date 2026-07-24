@@ -2,6 +2,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import StructuredData from "@/components/seo/StructuredData";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GoogleAnalytics } from "@next/third-parties/google";
 // import { ThemeProvider } from "@/components/theme-provider";
 
@@ -132,6 +133,7 @@ export default function RootLayout(
           theme="dark"
         />
         <Analytics />
+        <SpeedInsights/>
       </body>
 
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />

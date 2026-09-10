@@ -99,8 +99,9 @@ export const projects: Project[] = [
       "Gunicorn",
       "Python",
       "CSS",
+      "HTML5",
       "Jinja2",
-      "POstgreSQL",
+      "PostgreSQL",
     ],
 
     features: [
@@ -210,7 +211,7 @@ export const projects: Project[] = [
       "OpenAI API",
       "Tailwind CSS",
       "Multer",
-      "PDF-Parse",
+      "PDF-Parser",
     ],
 
     features: [

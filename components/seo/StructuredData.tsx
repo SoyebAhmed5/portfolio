@@ -13,7 +13,7 @@ export default function StructuredData() {
 
     sameAs: [
       "https://github.com/SoyebAhmed5",
-      "https://www.linkedin.com/in/soyebahmed2005",
+      "https://www.linkedin.com/in/soyebahmed5",
     ],
 
     knowsAbout: [

@@ -14,7 +14,7 @@ const socials = [
   },
   {
     icon: <FaLinkedin size={20} />,
-    href: "https://linkedin.com/in/soyebahmed2005",
+    href: "https://linkedin.com/in/soyebahmed5",
     label: "LinkedIn",
   },
   {

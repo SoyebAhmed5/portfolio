@@ -46,8 +46,8 @@ export default function ContactInfo() {
 
         <SocialCard
           title="LinkedIn"
-          subtitle="linkedin.com/in/soyebahmed2005"
-          href="https://www.linkedin.com/in/soyebahmed2005"
+          subtitle="linkedin.com/in/soyebahmed5"
+          href="https://www.linkedin.com/in/soyebahmed5"
           icon={<FaLinkedin size={22} />}
         />
 

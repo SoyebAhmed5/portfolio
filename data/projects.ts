@@ -93,14 +93,14 @@ export const projects: Project[] = [
     demo: "https://socialnest-7eim.onrender.com/",
 
     tech: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Tailwind CSS",
-      "JWT",
-      "Cloudinary",
-      "Axios",
+      "Flask",
+      "SQLAlchemy",
+      "Bootstrap",
+      "Gunicorn",
+      "Python",
+      "CSS",
+      "Jinja2",
+      "POstgreSQL",
     ],
 
     features: [
@@ -131,14 +131,14 @@ export const projects: Project[] = [
     demo: "",
 
     tech: [
-      "Next.js",
+    
       "React",
-      "TypeScript",
       "Tailwind CSS",
       "OpenAI API",
-      "Vercel AI SDK",
+      "Express.js",
+      "MongoDB",
+      "Node.js",
       "Shadcn UI",
-      "Zod",
     ],
 
     features: [
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     ],
   },
 
-  // Portfolio Advisor
+  // AI Portfolio Advisor
   {
     id: 6,
     featured: false,
@@ -205,11 +205,12 @@ export const projects: Project[] = [
     demo: "",
 
     tech: [
-      "Next.js",
       "Node.js",
       "Express.js",
       "OpenAI API",
       "Tailwind CSS",
+      "Multer",
+      "PDF-Parse",
     ],
 
     features: [

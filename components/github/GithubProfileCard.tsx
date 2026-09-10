@@ -52,7 +52,7 @@ export default function GithubProfileCard({
               </div>
             )}
 
-            {user.blog && (
+            {/* {user.blog && (
               <a
                 href={user.blog}
                 target="_blank"
@@ -61,7 +61,7 @@ export default function GithubProfileCard({
                 <Link2 size={18} />
                 Website
               </a>
-            )}
+            )} */}
 
           </div>
 

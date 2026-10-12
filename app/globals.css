@@ -1,45 +1,69 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-html,
-body {
-    background:#050816;
-    color:white;
-    scroll-behavior:smooth;
+:root {
+  color-scheme: light;
+  --background: #f8fafc;
+  --foreground: #18181b;
+  --surface: rgba(255, 255, 255, 0.82);
+  --nav-surface: rgba(255, 255, 255, 0.88);
+  --border: rgba(100, 116, 139, 0.24);
+  --muted: #64748b;
+  --nav-text: #52525b;
+  --grid-line: rgba(100, 116, 139, 0.08);
 }
 
-html {
-  scroll-behavior: smooth;
+.dark {
+  color-scheme: dark;
+  --background: #050816;
+  --foreground: #f8fafc;
+  --surface: rgba(9, 12, 29, 0.78);
+  --nav-surface: rgba(5, 8, 22, 0.82);
+  --border: rgba(255, 255, 255, 0.11);
+  --muted: #a1a1aa;
+  --nav-text: #d4d4d8;
+  --grid-line: rgba(148, 163, 184, 0.07);
 }
 
-body {
-  background: #050816;
-  color: white;
-  overflow-x: hidden;
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body { min-height: 100vh; overflow-x: hidden; background: var(--background); color: var(--foreground); transition: background-color 180ms ease, color 180ms ease; }
+* { box-sizing: border-box; }
+::selection { background: rgba(139, 92, 246, 0.28); }
+:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 3px; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 999px; }
+::-webkit-scrollbar-track { background: var(--background); }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { scrollbar-width: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 
-* {
-  box-sizing: border-box;
-}
+/* Keep muted copy and accent text readable when light mode is active. */
+:root:not(.dark) .text-zinc-300 { color: #334155; }
+:root:not(.dark) .text-zinc-400 { color: #475569; }
+:root:not(.dark) .text-zinc-500 { color: #64748b; }
+:root:not(.dark) .text-violet-400 { color: #6d28d9; }
+:root:not(.dark) .text-cyan-300 { color: #0e7490; }
+:root:not(.dark) .text-emerald-300 { color: #047857; }
+:root:not(.dark) .text-rose-300 { color: #be123c; }
+:root:not(.dark) .text-amber-300 { color: #b45309; }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
 
-::-webkit-scrollbar-thumb {
-  background: #7c3aed;
-  border-radius: 999px;
-}
+:root:not(.dark) .bg-white\/5 { background-color: rgba(15, 23, 42, 0.035); }
+:root:not(.dark) .bg-white\/10 { background-color: rgba(15, 23, 42, 0.06); }
+:root:not(.dark) .border-white\/10 { border-color: rgba(71, 85, 105, 0.2); }
 
-::-webkit-scrollbar-track {
-  background: #050816;
-}
+/* Light theme: prevent dark-theme utility colors from reducing contrast. */
+:root:not(.dark) .bg-black\/40 { background-color: var(--surface); }
+:root:not(.dark) .shadow-xl,
+:root:not(.dark) .shadow-2xl { --tw-shadow-color: rgba(15, 23, 42, 0.08); }
 
-/* Hide horizontal scrollbar */
 
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.hide-scrollbar {
-  scrollbar-width: none;
-}
+/* GitHub contribution cells: softer neutral/green levels in light mode.
+   The existing dark-mode palette remains unchanged. */
+:root:not(.dark) .github-contribution-cell[data-level="NONE"] { background-color: #ebedf0 !important; }
+:root:not(.dark) .github-contribution-cell[data-level="FIRST_QUARTILE"] { background-color: #9be9a8 !important; }
+:root:not(.dark) .github-contribution-cell[data-level="SECOND_QUARTILE"] { background-color: #40c463 !important; }
+:root:not(.dark) .github-contribution-cell[data-level="THIRD_QUARTILE"] { background-color: #30a14e !important; }
+:root:not(.dark) .github-contribution-cell[data-level="FOURTH_QUARTILE"] { background-color: #216e39 !important; }

@@ -12,11 +12,12 @@ export default function HeroButtons() {
           gap-2
           rounded-xl
           bg-violet-600
+          text-white
           px-6
           py-3
           font-semibold
           transition-all
-         hover:shadow-[0_0_30px_rgba(139,92,246,0.45)]
+         hover:bg-violet-700 hover:shadow-[0_0_30px_rgba(139,92,246,0.45)]
         "
       >
         View Projects
@@ -39,7 +40,10 @@ export default function HeroButtons() {
           font-semibold
           backdrop-blur-xl
           transition-all
-         hover:shadow-[0_0_30px_rgba(139,92,246,0.45)]
+          hover:border-violet-600
+          hover:bg-violet-600
+          hover:text-white
+          hover:shadow-[0_0_30px_rgba(139,92,246,0.45)]
         "
       >
         <Download size={18} />

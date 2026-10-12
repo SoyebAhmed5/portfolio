@@ -11,6 +11,7 @@ export default function ResumeButton() {
         gap-2
         rounded-full
         bg-violet-600
+        text-white
         px-6
         py-3
         font-semibold

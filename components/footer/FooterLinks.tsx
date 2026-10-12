@@ -12,7 +12,7 @@ const links = [
 export default function FooterLinks() {
   return (
     <div>
-      <h3 className="mb-5 font-semibold text-white">
+      <h3 className="mb-5 font-semibold text-[var(--foreground)]">
         Quick Links
       </h3>
 
@@ -21,7 +21,7 @@ export default function FooterLinks() {
           <Link
             key={link.name}
             href={link.href}
-            className="text-zinc-400 transition hover:text-violet-400"
+            className="text-[var(--muted)] transition hover:text-violet-600 dark:hover:text-violet-300"
           >
             {link.name}
           </Link>

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Code2, Brain, Briefcase, GraduationCap } from "lucide-react";
-import Image from "next/image";
 
 const stats = [
   {
@@ -44,55 +43,18 @@ export default function About() {
           About Me
         </motion.h2>
 
-        <div className="grid gap-12 lg:grid-cols-2">
-
-          {/* Left Side */}
-
+        <div className="mx-auto max-w-4xl">
           <motion.div
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
-          >
-          <div className="relative mx-auto mb-8 h-56 w-56 overflow-hidden rounded-full border border-violet-500/30 bg-gradient-to-br from-violet-600/30 to-cyan-500/30">
-  <Image
-  src="/profile.jpeg"
-  alt="Soyeb Ahmed"
-  fill
-  priority
-  sizes="224px"
-  className="object-cover"
-/>
-</div>
-
-            <h3 className="text-center text-3xl font-bold">
-              Soyeb Ahmed
-            </h3>
-
-            <p className="mt-4 text-center text-zinc-400">
-              Full Stack Developer • AI Enthusiast • Software Engineer
-            </p>
-          </motion.div>
-
-          {/* Right Side */}
-
-          <motion.div
-            initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <h3 className="mb-6 text-3xl font-bold">
               Who am I?
             </h3>
 
-            <p className="leading-8 text-zinc-300">
-              I'm a passionate Full Stack Developer and AI enthusiast,
-              currently pursuing B.Tech in Computer Science.
-              I enjoy building scalable web applications, AI-powered
-              solutions, and solving challenging DSA problems.
-
-              My goal is to become a Software Engineer who builds
-              impactful products that solve real-world problems.
+            <p className="leading-8 text-[var(--foreground)]">
+              I am a Full Stack Developer specializing in building scalable, user-focused web applications, with a strong interest in AI/ML and Data Science. Skilled in React.js, Next.js, JavaScript, Python, and backend technologies, I develop practical solutions that address real-world problems. My achievements include solving 400+ coding problems, ranking in the top 9.33% of LeetCode users, and scoring in the 98.52 percentile in Naukri Campus Young Turks 2025. With hands-on experience across multiple internships and leadership as a GeeksforGeeks Campus Representative, I am focused on delivering impactful software solutions.
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-5">
@@ -104,7 +66,7 @@ export default function About() {
                     scale: 1.03,
                   }}
                   key={item.label}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
+                  className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-sm backdrop-blur-xl"
                 >
                   <item.icon className="mb-4 h-8 w-8 text-violet-400" />
 
@@ -112,7 +74,7 @@ export default function About() {
                     {item.value}
                   </h4>
 
-                  <p className="text-zinc-400">
+                  <p className="text-[var(--muted)]">
                     {item.label}
                   </p>
                 </motion.div>
@@ -120,7 +82,6 @@ export default function About() {
 
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>

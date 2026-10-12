@@ -38,7 +38,8 @@ export default function ContributionCell({
         );
       }}
       onMouseLeave={onLeave}
-      className="h-4 w-4 rounded-[4px] cursor-pointer"
+      className="github-contribution-cell h-4 w-4 rounded-[4px] cursor-pointer"
+      data-level={day.contributionLevel}
       style={{
         backgroundColor:
           contributionLevelColor[

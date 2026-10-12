@@ -45,7 +45,7 @@ export default function ProjectCard({ project }: Props) {
           {project.title}
         </h3>
 
-        <p className="mt-4 text-zinc-400 leading-7">
+        <p className="mt-4 leading-7 text-[var(--muted)]">
           {project.description}
         </p>
 
@@ -57,7 +57,7 @@ export default function ProjectCard({ project }: Props) {
 
             <span
               key={item}
-              className="rounded-full bg-violet-500/10 border border-violet-500/20 px-3 py-1 text-sm text-violet-300"
+              className="rounded-full border border-violet-400 bg-violet-600 px-3 py-1 text-sm font-semibold text-white shadow-sm dark:border-violet-500/40 dark:bg-violet-500/20 dark:text-violet-100"
             >
               {item}
             </span>
@@ -75,7 +75,7 @@ export default function ProjectCard({ project }: Props) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-xl border border-white/10 px-4 py-3 hover:bg-white/10 transition"
+              className="flex items-center gap-2 rounded-xl border border-[var(--border)] px-4 py-3 text-[var(--foreground)] transition hover:border-violet-600 hover:bg-violet-600 hover:text-white dark:hover:bg-violet-500/20"
             >
               <FaGithub  size={18} />
               Github  
@@ -87,7 +87,7 @@ export default function ProjectCard({ project }: Props) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-xl bg-violet-600 px-4 py-3 hover:bg-violet-500 transition"
+              className="flex items-center gap-2 rounded-xl bg-violet-600 px-4 py-3 font-semibold text-white transition hover:bg-violet-500 hover:text-white"
             >
               <ExternalLink size={18} />
               Live Demo

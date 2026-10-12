@@ -25,19 +25,19 @@ export default function CodolioHero() {
 
       <div className="mt-8 flex flex-wrap justify-center gap-3">
 
-        <span className="rounded-full bg-white/10 px-4 py-2">
+        <span className="rounded-full border border-violet-600/20 bg-violet-600 px-4 py-2 text-sm font-medium text-white dark:border-transparent dark:bg-white/10 dark:text-[var(--foreground)]">
           LeetCode
         </span>
 
-        <span className="rounded-full bg-white/10 px-4 py-2">
+        <span className="rounded-full border border-violet-600/20 bg-violet-600 px-4 py-2 text-sm font-medium text-white dark:border-transparent dark:bg-white/10 dark:text-[var(--foreground)]">
           GeeksforGeeks
         </span>
 
-        <span className="rounded-full bg-white/10 px-4 py-2">
+        <span className="rounded-full border border-violet-600/20 bg-violet-600 px-4 py-2 text-sm font-medium text-white dark:border-transparent dark:bg-white/10 dark:text-[var(--foreground)]">
           HackerRank
         </span>
 
-        <span className="rounded-full bg-white/10 px-4 py-2">
+        <span className="rounded-full border border-violet-600/20 bg-violet-600 px-4 py-2 text-sm font-medium text-white dark:border-transparent dark:bg-white/10 dark:text-[var(--foreground)]">
           CodeChef
         </span>
 
@@ -54,6 +54,7 @@ export default function CodolioHero() {
         gap-2
         rounded-xl
         bg-violet-600
+        text-white
         px-6
         py-3
         font-semibold

@@ -15,7 +15,7 @@ import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-[#050816] text-white">
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
 
       <Navbar />
 

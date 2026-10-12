@@ -32,7 +32,7 @@ const socials = [
 export default function FooterSocials() {
   return (
     <div>
-      <h3 className="mb-5 font-semibold text-white">
+      <h3 className="mb-5 font-semibold text-[var(--foreground)]">
         Connect
       </h3>
 
@@ -46,12 +46,12 @@ export default function FooterSocials() {
             className="
               flex h-11 w-11 items-center justify-center
               rounded-full
-              border border-white/10
-              bg-white/5
+              border border-[var(--border)]
+              bg-[var(--surface)] text-[var(--foreground)]
               transition-all
               hover:-translate-y-1
-              hover:border-violet-500/40
-              hover:bg-violet-500/10
+              hover:border-violet-600
+              hover:bg-violet-600 hover:text-white dark:hover:border-violet-400 dark:hover:bg-violet-500
             "
           >
             {item.icon}

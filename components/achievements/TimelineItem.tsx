@@ -61,7 +61,7 @@ export default function TimelineItem({
       >
         <Icon
           size={20}
-          className="text-white"
+          className="text-[var(--foreground)]"
         />
       </div>
 

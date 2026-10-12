@@ -21,7 +21,8 @@ export default function ContributionCell({
         stiffness: 300,
       }}
       title={`${day.contributionCount} contributions\n${day.date}`}
-      className="h-[18px] w-[18px] rounded-[5px]"
+      className="github-contribution-cell h-[18px] w-[18px] rounded-[5px]"
+      data-level={day.contributionLevel}
       style={{
         backgroundColor:
           contributionColors[day.contributionLevel],

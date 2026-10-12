@@ -17,38 +17,15 @@ const links = [
 
 export default function NavLinks() {
   const active = useActiveSection();
-
   return (
-    <div className="hidden items-center gap-8 md:flex">
+    <div className="hidden items-center gap-0.5 xl:flex 2xl:gap-1">
       {links.map((link) => {
-        const id = link.href.replace("#", "");
+        const id = link.href.slice(1);
         const isActive = active === id;
-
-        return (
-          <Link
-            key={link.name}
-            href={link.href}
-            className={`relative py-2 transition-colors duration-300 ${
-              isActive
-                ? "text-violet-400"
-                : "text-zinc-300 hover:text-white"
-            }`}
-          >
-            {link.name}
-
-            {isActive && (
-              <motion.span
-                layoutId="active-nav"
-                className="absolute bottom-0 left-0 h-[2px] w-full rounded-full bg-violet-500"
-                transition={{
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 30,
-                }}
-              />
-            )}
-          </Link>
-        );
+        return <Link key={link.href} href={link.href} aria-current={isActive ? "location" : undefined} className={`relative whitespace-nowrap rounded-full px-2 py-2 text-xs font-semibold transition-colors 2xl:px-2.5 2xl:text-sm ${isActive ? "text-violet-700 dark:text-violet-300" : "text-[var(--nav-text)] hover:text-[var(--foreground)]"}`}>
+          {link.name}
+          {isActive && <motion.span layoutId="active-nav" className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-violet-500" transition={{ type: "spring", stiffness: 400, damping: 30 }} />}
+        </Link>;
       })}
     </div>
   );

@@ -4,7 +4,7 @@ import BackToTop from "./BackToTop";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black/40 backdrop-blur-xl">
+    <footer className="border-t border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)]">
       <div className="mx-auto max-w-7xl px-6 py-16">
 
         <div className="grid gap-12 lg:grid-cols-[2fr_1fr_1fr]">
@@ -15,7 +15,7 @@ export default function Footer() {
               Soyeb<span className="text-violet-500">.</span>
             </h2>
 
-            <p className="mt-6 max-w-md leading-8 text-zinc-400">
+            <p className="mt-6 max-w-md leading-8 text-[var(--muted)]">
               Building scalable web applications, AI-powered
               solutions, and modern digital experiences with
               clean design and performance in mind.
@@ -34,14 +34,14 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-zinc-500 md:flex-row">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-[var(--border)] pt-8 text-sm text-[var(--muted)] md:flex-row">
 
           <p>
             © 2026 Soyeb Ahmed. All rights reserved.
           </p>
 
           <p>
-            Built with Next.js • React • Three.js • Tailwind CSS
+            Built with Next.js • React • Tailwind CSS
           </p>
 
         </div>

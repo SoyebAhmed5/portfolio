@@ -37,8 +37,10 @@ export default function DeveloperSnapshot() {
           className="
           rounded-2xl
           border
-          border-white/10
-          bg-white/5
+          border-violet-600/20
+          bg-violet-600/5
+          dark:border-white/10
+          dark:bg-white/5
           p-5
           backdrop-blur-xl
           "

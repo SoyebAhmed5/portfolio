@@ -23,7 +23,7 @@ export default function HeroContent() {
             px-4
             py-2
             text-sm
-            text-violet-300
+            text-violet-500
           "
         >
           🚀 Available for Internships & Full-Time Opportunities
@@ -34,9 +34,9 @@ export default function HeroContent() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="mt-8 text-lg text-zinc-400"
+        className="mt-8 text-lg text-[var(--muted)]"
       >
-        Hi, I'm
+        Hi, I am
       </motion.p>
 
       <motion.h1
@@ -65,7 +65,7 @@ export default function HeroContent() {
           text-violet-400
         "
       >
-        Full Stack Developer · AI & ML Enthusiast
+        Full Stack Developer · AI & ML Developer
       </motion.h2>
 
       <motion.p
@@ -77,7 +77,7 @@ export default function HeroContent() {
           max-w-xl
           text-lg
           leading-8
-          text-zinc-400
+          text-[var(--muted)]
         "
       >
         Building scalable full-stack applications and AI-powered solutions that solve real-world problems.

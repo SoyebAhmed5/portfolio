@@ -53,12 +53,14 @@ export default function HighlightCard({
     rounded-lg
     border
     border-violet-500
-    bg-violet-600/10
+    bg-violet-600
     px-4
     py-2
     text-sm
     font-medium
-    text-violet-300
+    text-white
+    dark:bg-violet-600/10
+    dark:text-violet-300
     transition-all
     duration-300
     hover:bg-violet-600

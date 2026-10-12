@@ -27,7 +27,7 @@ export default function ExperienceCard({ experience }: Props) {
 
         <div>
 
-          <span className="rounded-full bg-violet-500/20 px-3 py-1 text-xs text-violet-300">
+          <span className="rounded-full bg-violet-600 px-3 py-1 text-xs font-semibold text-white dark:bg-violet-500/20 dark:text-violet-300">
             {experience.type}
           </span>
 

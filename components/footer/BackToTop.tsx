@@ -16,7 +16,7 @@ export default function BackToTop() {
       className="
         flex h-12 w-12 items-center justify-center
         rounded-full
-        border border-white/10
+        border border-[var(--border)]
         bg-white/5
         transition-all
         hover:-translate-y-1
